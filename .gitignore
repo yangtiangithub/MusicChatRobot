@@ -1,0 +1,10 @@
+#注释
+ltp_data_v3/
+model/
+tryPython/
+venv/
+__pycache__/
+.idea/
+lexicon/song.txt
+lexicon/actor.txt
+

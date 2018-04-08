@@ -1,0 +1,17 @@
+一、环境搭建
+1python环境：python3
+2开发工具：pycharm
+3第三方库：pyltp,python-aiml
+4创建ltp_data_v3目录，把ltp模型下载解压到目录
+
+二、完成进度
+1KeywordUtil类封装获取句子关键字，目前完成人名的提取
+2LTPUtil类封装了ltp方法，包括分词、词性标注、命名实体识别、依存句法分析
+3Sentence类
+
+三、附录
+哈工大的ltp：https://github.com/HIT-SCIR/pyltp
+<<<<<<< HEAD
+=======
+
+>>>>>>> eb7150784644b3e65536d89bb0c63f05ad3f073b
