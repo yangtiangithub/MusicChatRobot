@@ -13,11 +13,113 @@
             I'm a bot, silly!
         </template>
     </category>
-<!-- test part -->
     <category>
         <pattern>你好</pattern>
         <template>
             I'm a bot, silly!
+            <think>
+                <set name="topic">direct_search_song_name</set>
+            </think>
         </template>
     </category>
+
+    <category>
+        <pattern>我喜欢鱼</pattern>
+        <template>
+            I'm a bot, silly!
+        </template>
+    </category>
+<!-- test part -->
+    <category>
+        <pattern>搜歌名 *</pattern>
+        <template>
+        <think>
+        <set name = "song_name"> <star/> </set>
+        <set name = "signal">song_name_get</set>
+        </think>
+        这是你想要找的歌吗？<get name = "song_name"/>
+        </template>
+    </category>
+    <category>
+        <pattern>不是</pattern>
+        <template>
+            <condition name = "signal" value = "song_name_get">
+            可以输入更多筛选条件吗？比如歌手？专辑？
+            </condition>
+            <condition name = "signal" value = "singer_name_get">
+            请输入更过的相关信息
+            </condition>
+        </template>
+    </category>
+    <category>
+        <pattern>是</pattern>
+        <template>
+            <condition name = "signal" value = "song_name_get">
+            好的
+            </condition>
+            <condition name = "signal" value = "singer_name_get">
+            好的
+            </condition>
+        </template>
+    </category>
+    <category>
+        <pattern>搜 * 的歌</pattern>
+        <template>
+        <think>
+        <set name = "singer_name"> <star/> </set>
+        <set name = "signal">singer_name_get</set>
+        </think>
+        这是你想要找的歌吗？
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>搜比较 * 的歌</pattern>
+        <template>
+        <think>
+        <set name = "song_type"> <star/> </set>
+        <set name = "signal">song_type_get</set>
+        </think>
+        这些歌喜欢吗？
+        </template>
+    </category>
+    <category>
+        <pattern>不喜欢</pattern>
+        <template>
+            <condition name = "signal" value = "song_type_get">
+            可以输入更多筛选条件吗？比如你想听钢琴曲？纯音乐？重金属味的？还是说哪个歌手唱的？
+            </condition>
+        </template>
+    </category>
+    <category>
+        <pattern>喜欢</pattern>
+        <template>
+            <condition name = "signal" value = "song_type_get">
+            好的
+            </condition>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>搜适合 * 时候听的歌</pattern>
+        <template>
+        <think>
+        <set name = "song_type"> <star/> </set>
+        <set name = "signal">song_type_get</set>
+        </think>
+        这些歌喜欢吗？
+        </template>
+    </category>
+
+
+
+
+
+
+
+
+
+
 </aiml>
