@@ -8,3 +8,7 @@ __pycache__/
 lexicon/song.txt
 lexicon/actor.txt
 
+#忽略aiml的brain加速文件
+chatRobot/mybot_brain.brn
+
+
