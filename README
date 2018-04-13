@@ -5,10 +5,10 @@
 4创建ltp_data_v3目录，把ltp模型下载解压到目录
 
 二、完成进度
-1KeywordUtil类封装获取句子关键字，目前完成人名的提取
-2LTPUtil类封装了ltp方法，包括分词、词性标注、命名实体识别、依存句法分析
-3Sentence类
+KeywordUtil类封装获取句子关键字，目前完成人名的提取
+LTPUtil类封装了ltp方法，包括分词、词性标注、命名实体识别、依存句法分析
+Sentence类
+musicSearch.aiml,初步完成歌名、歌手、音乐标签搜索对话
 
 三、附录
 哈工大的ltp：https://github.com/HIT-SCIR/pyltp
-
